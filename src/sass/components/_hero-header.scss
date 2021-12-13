@@ -1,0 +1,573 @@
+/* ===========  BURGER ========= */
+.navbar {
+    font-family: var(--main-font);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: var(--menu-background);
+    right: -100%;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+    z-index: 30;
+  }
+  
+  .change {
+    right: 0;
+  }
+  
+  .hamburger-menu {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 50;
+  }
+  
+  .burger-line {
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    transition: all 0.8s;
+  }
+  
+  .hamburger-menu--opened .line-1 {
+    transform: rotateZ(-405deg) translate(-4px, 4px);
+    background-color: var(--white-color);
+  }
+  
+  .hamburger-menu--opened .line-2 {
+    opacity: 0;
+  }
+  
+  .hamburger-menu--opened .line-3 {
+    transform: rotateZ(405deg) translate(-5px, -5px);
+    background-color: var(--white-color);
+  }
+  
+  /* ===========  BURGER END ========= */
+  
+  /* ===========  HEADER ========= */
+  
+  .header__logo {
+    margin-top: 6px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .navigation {
+    &__button-hidden {
+      display: none;
+    }
+    &__item {
+      margin-bottom: 23px;
+      margin-left: 21px;
+      font-weight: 700;
+    }
+    &__button-div {
+      padding-right: 20px;
+      padding-left: 21px;
+      padding-top: 60px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+    &__button {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 21px;
+      color: var(--secondary-color);
+      background-color: var(--white-color);
+      border: none;
+      border-radius: 22px;
+      padding-left: 60px;
+      padding-right: 55px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      white-space: nowrap;
+      &::after {
+        content: '';
+        border: 1px solid var(--mobile-menu-border);
+        width: 250px;
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+      }
+      &-icon-red {
+        width: 10px;
+        height: 10px;
+        fill: red;
+        margin-left: 15px;
+      }
+  
+      &:hover{
+        background-color: var(--btn-color);
+      }
+    }
+  
+    .navigation__link {
+      text-decoration: none;
+      color: var(--white-color);
+      position: relative;
+      font-size: 14px;
+      line-height: 18px;
+      &:hover,
+      &:focus {
+        color: var(--secondary-color);
+      }
+    }
+    .navigation__link::after {
+      content: '';
+      border: 1px solid var(--mobile-menu-border);
+      width: 250px;
+      position: absolute;
+      left: -20px;
+      top: 30px;
+    }
+  }
+  
+  /* ===========  HEADER END ========= */
+  
+  /* ===========  HERO ========= */
+  .hero {
+    position: relative;
+    z-index: 0;
+  
+    &__header {
+      font-family: var(--secondary-font);
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white-color);
+      padding-top: 137px;
+      padding-right: 62px;
+  
+      &--dark {
+        color: var(--secondary-color);
+        line-height: 50px;
+        font-size: 48px;
+      }
+    }
+  
+    &__picture{
+      cursor: pointer;
+    }
+  
+    &__btn {
+      margin-top: 19px;
+      margin-bottom: 154px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 8px;
+      line-height: 10px;
+      color: var(--secondary-color);
+      background-color: var(--white-color);
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: var(--btn-color);
+      }
+  
+      &--dark {
+        margin-right: 8px;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+  
+        &:hover {
+          background-color: var(--dots-color);
+        }
+      }
+    }
+  
+    &__link {
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    &__img {
+      position: absolute;
+      top: 36px;
+      right: 12px;
+      z-index: -1;
+    }
+  
+    &__circle {
+      position: absolute;
+      top: 27px;
+      left: 16px;
+      width: 346px;
+      height: 346px;
+      border-radius: 50%;
+      background-color: var(--time-table-color);
+      z-index: -2;
+    }
+  
+    &__img-milk {
+      display: none;
+    }
+    &__img-tasty {
+      display: none;
+    }
+    &__description {
+      display: none;
+    }
+    &__offer {
+      display: none;
+    }
+  }
+  
+  // --------------------------- TABLET ------------------------------ //
+  
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    .navbar {
+      width: 254px;
+    }
+  
+    .header__logo {
+      margin-top: 0px;
+    }
+  
+    .navigation {
+      &__button-hidden {
+        display: initial;
+      }
+    }
+  
+    .hamburger-menu {
+      right: 224px;
+      top: 54px;
+    }
+    .navigation__button-icon-red {
+      width: 10px;
+      height: 10px;
+      fill: red;
+      margin-left: 15px;
+    }
+    .navigation__button-tablet {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 21px;
+      color: var(--secondary-color);
+      background-color: var(--white-color);
+      border: none;
+      border-radius: 22px;
+      padding-left: 37px;
+      padding-right: 33px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      position: absolute;
+      right: 34px;
+      top: 38px;
+    }
+    .hamburger-menu--opened .line-1 {
+      transform: rotateZ(-405deg) translate(-4px, 4px) translateY(110px) translateX(165px);
+      background-color: var(--white-color);
+    }
+    .hamburger-menu--opened .line-3 {
+      transform: rotateZ(405deg) translate(-5px, -5px) translateY(-165px) translateX(110px);
+      background-color: var(--white-color);
+    }
+  
+    .hero {
+      position: relative;
+      z-index: 0;
+  
+      &__header {
+        font-size: 22px;
+        line-height: 1.136;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--white-color);
+        padding-top: 15px;
+        padding-right: 0px;
+        max-width: 162px;
+        &--dark {
+          color: var(--secondary-color);
+          line-height: 30px;
+          font-size: 35px;
+        }
+      }
+  
+      &__btn {
+        margin-top: 17px;
+        margin-bottom: 0;
+        &--dark {
+          margin-right: 8px;
+          background-color: var(--secondary-color);
+          color: var(--white-color);
+  
+          &:hover {
+            background-color: var(--dots-color);
+          }
+        }
+      }
+  
+      &__img {
+        position: absolute;
+        top: -24px;
+        right: 213px;
+      }
+  
+      &__circle {
+        position: absolute;
+        top: -56px;
+        left: 273px;
+        width: 324px;
+        height: 322px;
+      }
+  
+      &__img-milk {
+        display: flex;
+        margin-top: 19px;
+        padding-bottom: 23px;
+      }
+  
+      &__img-tasty {
+        display: flex;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+      }
+  
+      &__description {
+        display: block;
+        position: absolute;
+        left: 120px;
+        bottom: 34px;
+        font-family: var(--main-font);
+        font-size: 8px;
+        line-height: 1.5;
+        color: var(--white-color);
+        max-width: 114px;
+      }
+  
+      &__img-arrow-right {
+        margin-top: 7px;
+      }
+  
+      &__offer {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 9px;
+      }
+    }
+  
+    .offer {
+      &__number {
+        font-family: var(--secondary-font);
+        font-size: 28px;
+        line-height: 1.142;
+        color: var(--secondary-color);
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 0;
+        &::before {
+          position: absolute;
+          content: '';
+          top: 0px;
+          right: -35px;
+          width: 100%;
+          height: 100%;
+          background-image: url('../images/Hero_Header/white-dot-tablet.png');
+          background-repeat: no-repeat;
+          z-index: -1;
+        }
+      }
+  
+      &__description {
+        font-family: var(--main-font);
+        font-size: 8px;
+        line-height: 1.25;
+        color: var(--white-color);
+        text-align: right;
+        margin-bottom: 14px;
+      }
+    }
+  }
+  
+  // --------------------------- DESKTOP ------------------------------ //
+  @media screen and (min-width: 1280px) {
+    .header {
+      display: flex;
+    }
+  
+    .hamburger-menu {
+      display: none;
+    }
+  
+    .navbar {
+      position: initial;
+      background-color: var(--first-background-color);
+      width:0px;
+    }
+  
+    .header__logo {
+      margin: 37px 110px 84px 46px;
+    }
+  
+    .navigation .navigation__link::after {
+      content: none;
+    }
+  
+    .navigation {
+      display: flex;
+  
+      &__button {
+        &::after {
+          display: none;
+        }
+  
+        &-div{
+          padding-top: 38px;
+          left:600px;
+        }
+      }
+  
+      &__list {
+        display: flex;
+        min-width: 541px;
+        padding-left: 0;
+        position:absolute;
+      }
+      &__item {
+        white-space: nowrap;
+        padding-top: 50px;
+        font-size: 16px;
+        line-height: 21px;
+        &:not(:first-child) {
+          margin-left: 35px;
+        }
+      }
+    }
+  
+    .hero {
+      position: relative;
+      z-index: 0;
+      padding-left: 77px;
+  
+      &__header {
+        font-size: 38px;
+        line-height: 1.157;
+        padding-top: 0px;
+        padding-right: 0px;
+        margin-left: 38px;
+        max-width: 277px;
+        &--dark {
+          color: var(--secondary-color);
+          line-height: 49px;
+          font-size: 59px;
+        }
+      }
+  
+      &__btn {
+        margin-top: 25px;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 18px;
+        padding:13px 24px;
+        &--dark {
+          margin-right: 8px;
+          background-color: var(--secondary-color);
+          color: var(--white-color);
+  
+          &:hover {
+            background-color: var(--dots-color);
+          }
+        }
+      }
+  
+      &__img {
+        position: absolute;
+        top: -63px;
+        right: 450px;
+      }
+  
+      &__circle {
+        position: absolute;
+        top: -119px;
+        left: 475px;
+        width: 538px;
+        height: 538px;
+      }
+  
+      &__img-milk {
+        display: flex;
+        margin-top: 51px;
+        padding-bottom: 40px;
+      }
+  
+      &__img-tasty {
+        display: flex;
+        position: absolute;
+        right: 109px;
+        bottom: 0px;
+      }
+  
+      &__description {
+        display: block;
+        position: absolute;
+        left: 295px;
+        bottom: 51px;
+        font-size: 14px;
+        line-height: 1.428;
+        color: var(--white-color);
+        max-width: 200px;
+      }
+  
+      &__img-arrow-right {
+        margin-top: 20px;
+      }
+  
+      &__offer {
+        display: flex;
+        position: absolute;
+        right: 97px;
+        top: 9px;
+      }
+    }
+  
+    .offer {
+      &__number {
+        font-family: var(--secondary-font);
+        font-size: 46px;
+        line-height: 1.152;
+        color: var(--secondary-color);
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 0;
+        &::before {
+          position: absolute;
+          content: '';
+          top: -4px;
+          right: -60px;
+          width: 100%;
+          height: 100%;
+          background-image: url('../images/Hero_Header/white-dot-desktop.png');
+          background-repeat: no-repeat;
+          z-index: -1;
+        }
+      }
+  
+      &__description {
+        font-family: var(--main-font);
+        font-size: 14px;
+        line-height: 1.25;
+        color: var(--white-color);
+        text-align: right;
+        margin-bottom: 18px;
+      }
+    }
+  
+    .buttons {
+      margin-left: 30px;
+    }
+  }

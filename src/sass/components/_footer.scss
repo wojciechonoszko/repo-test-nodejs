@@ -1,0 +1,78 @@
+footer {
+    background-color: #fff5f6;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Titan One";
+    text-transform: uppercase;
+  }
+  .footer__title-span1 {
+    color: #ffa5ba;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .footer__title-span2 {
+    font-size: 58px;
+    color: #d41443;
+  }
+  
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e1e1e1;
+  }
+  .copyright__txt {
+    color: #907e82;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .container--footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .social-media {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .foot-svg {
+    margin: 10px;
+    background-color: #ffa5ba;
+    border: none;
+    border-radius: 50%;
+    padding: 4px;
+  }
+  .foot-svg:hover {
+    background-color: #d41443;
+  }
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer__contact-link {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .tel {
+    color: #d41443;
+  }
+  .telegram-icon-position {
+    padding-right: 10%;
+  }
+  .footer__social-media{
+      display: flex;
+      justify-content: flex-end;
+  }

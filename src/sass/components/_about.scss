@@ -1,0 +1,105 @@
+.about {
+    background-color: $sections-background;
+    background-image: url("./images/about/about-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+        background-image: none;
+    }
+
+
+
+
+    &__title {
+        text-align: center;
+
+        &-subtitle {
+            font-size: 30px;
+            font-weight: 400;
+            color: $accent-color-secondary;
+            font-family: swap;
+        }
+
+        &-title {
+            font-size: 58px;
+            font-weight: 400;
+            color: $accent-color;
+        }
+    
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &__description {
+        margin-left: 10%;
+    }
+
+}
+.about__description {
+    display: block;
+}
+
+.about__title-subtitle,
+.about__title-title {
+    font-family: Titan one;
+}
+
+.description {
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+        margin-bottom: 35px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 220px;
+
+    @media screen and (min-width: 1280px) {
+            font-size: 16px;
+            line-height: 1.76;
+            letter-spacing: .04em;
+            width: 463px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.79;
+        margin-bottom: 32px;
+        width: 340px;
+    }
+    
+}
+
+.description-second {
+    font-size: 14px;
+    color: $text-black-secondary;
+}
+
+.btn-about {
+    width: 176px;
+    height: 44px;
+    color: $accent-color;
+    border-radius: 22px;
+    font-weight: 700;
+    border: none;
+    background-color: $white-color;
+    margin-bottom: 30px;
+
+    &:hover,
+    &:focus {
+        background-color: $button-hover-color;
+    }
+
+
+}
