@@ -1,6 +1,6 @@
 .about {
     background-color: $sections-background;
-    background-image: url("./images/about/about-bg.png");
+    background-image: url("../images/about/about-bg.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -31,6 +31,7 @@
     }
 
     &__content {
+        
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -40,7 +41,14 @@
         }
         
     }
-
+        &__content-img {
+            position: absolute;
+            height: 500px;
+            background-image: url("../images/about/about-img1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+    }
     &__description {
         margin-left: 10%;
     }
