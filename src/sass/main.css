@@ -224,6 +224,7 @@ img {
     margin: 0px;
     margin-right: 17px;
     background-position: left;
+    float: left;
   }
 }
 
@@ -269,7 +270,7 @@ img {
     margin-right: 0px;
     margin-left: auto;
     display: block;
-    float: top;
+    float: left;
   }
 }
 
