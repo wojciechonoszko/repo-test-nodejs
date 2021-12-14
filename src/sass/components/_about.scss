@@ -11,7 +11,11 @@
       (min-resolution: 2dppx) {
       
       background-image: url('../images/about/about-bg-mobile@2x.png');
-      
+    
+      @media screen and (min-width: 768px) {
+        background-image: none;
+        
+    }  
 }
 
 
@@ -44,6 +48,21 @@
         margin-bottom: 15px;
    
         color: #FFA5BA;
+
+        @media screen and (min-width: 768px) {
+            width: 320px; 
+            height: 30px;
+            font-size: 26px;
+            margin-bottom: 16px;
+            
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 360px; 
+            height: 40px;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
     }
  
     &__title {
@@ -54,30 +73,84 @@
       margin-bottom: 26px;
       line-height: 100%;
 
-   }
-    &__img {
-      width: 280px;
-      height: 280px;
-      background-image: url("../images/about/cow-mobile.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 46px;
-      @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      
-      background-image: url('../images/about/cow-mobile@2x.png');
-      
-}
+      @media screen and (min-width:768px) {
+        width: 440px;
+        height: 60px;
+        margin-bottom: 50px;
+        font-size: 48px;
+          
+      }
 
+      @media screen and (min-width:1280px) {
+        width: 440px;
+        height: 60px;
+        margin-bottom: 50px;
+        font-size: 48px;
+          
+      }
 
+    }
+
+ 
 }
 
     
+}
+.about__img {
+    width: 280px;
+    height: 280px;
+    background-image: url("../images/about/cow-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+   
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    
+    background-image: url('../images/about/cow-mobile@2x.png');
+    
+
+        @media screen and (min-width: 768px) {
+        background-image: url('../images/about/cow-tablet.png');
+        width: 340px;
+        height: 340px;
+        margin: 0px;
+        margin-right: 17px;
+        background-position: left;
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+        background-image: url('../images/about/cow-tablet@2x.png');
+    }
+}
+        @media screen and (min-width: 1280px) {
+        background-image: url('../images/about/cow-desktop.png');
+        width: 516px;
+        height: 516px;
+        margin: 0px;
+        margin-right: 74px;
+        background-position: left;
+        
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+    
+        background-image: url('../images/about/cow-desktop@2x.png');
+}
+}
+}
+
+
 }
 
 .about__text {
@@ -93,6 +166,15 @@
     font-weight: 500;
     font-size: 12px;
     color: #000000;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        margin: 0px;
+        margin-right: 0px;
+        margin-left:auto;
+        display: block;
+        float: top;
+    }
 
     &_first-paragraph {
         margin-right: auto;
@@ -131,49 +213,4 @@
     }
 
 
-}
-
-.description {
-
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.58;
-        margin-bottom: 35px;
-        margin-right: auto;
-        margin-left: auto;
-        width: 220px;
-
-    @media screen and (min-width: 1280px) {
-            font-size: 16px;
-            line-height: 1.76;
-            letter-spacing: 0.04em;
-            width: 463px;
-            font-weight: 500px;
-    }
-
-    @media screen and (min-width: 768px) {
-        font-size: 14px;
-        line-height: 1.79;
-        margin-bottom: 32px;
-        width: 340px;
-    }
-    
-}
-
-.description-second {
-    font-size: 14px;
-    color: $text-black-secondary;
-}
-
-
-
-.about__content-img {
-    position: absolute;
-    height: 500px;
-    width: auto;
-    background-image: url("../images/about/about-img1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 }
