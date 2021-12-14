@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 80%;
-    padding: 0px;
+    padding: 20px;
     height: 860px;
     margin-bottom: 40px;
 
@@ -34,6 +34,16 @@
         background-position: bottom;
         padding: 0px;
         margin-bottom: 40px;
+
+        @media (min-device-pixel-ratio: 2),
+          (-webkit-min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+      
+          background-image: url('../images/about/about-bg-desktop@2x.png');
+    
+     
+}
 
 }  
 }

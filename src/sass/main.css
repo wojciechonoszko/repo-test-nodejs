@@ -113,7 +113,7 @@ img {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 80%;
-  padding: 0px;
+  padding: 20px;
   height: 860px;
   margin-bottom: 40px;
 }
@@ -140,6 +140,12 @@ img {
     background-position: bottom;
     padding: 0px;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section__about {
+    background-image: url("../images/about/about-bg-desktop@2x.png");
   }
 }
 
